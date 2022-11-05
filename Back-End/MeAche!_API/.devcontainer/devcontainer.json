@@ -1,0 +1,59 @@
+// Update the VARIANT arg in docker-compose.yml to pick a Python version
+{
+	"name": "API do MeAche!(Python 3 & PostgreSQL)",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+
+	"customizations": {
+		"vscode": {
+			"settings": { 
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"python.formatting.autopep8Path": "/usr/local/py-utils/bin/autopep8",
+				"python.formatting.blackPath": "/usr/local/py-utils/bin/black",
+				"python.formatting.yapfPath": "/usr/local/py-utils/bin/yapf",
+				"python.linting.banditPath": "/usr/local/py-utils/bin/bandit",
+				"python.linting.flake8Path": "/usr/local/py-utils/bin/flake8",
+				"python.linting.mypyPath": "/usr/local/py-utils/bin/mypy",
+				"python.linting.pycodestylePath": "/usr/local/py-utils/bin/pycodestyle",
+				"python.linting.pydocstylePath": "/usr/local/py-utils/bin/pydocstyle",
+				"python.linting.pylintPath": "/usr/local/py-utils/bin/pylint",
+				"python.testing.pytestPath": "/usr/local/py-utils/bin/pytest"
+			},
+			
+			"extensions": [
+				"wwm.better-align",
+				"streetsidesoftware.code-spell-checker-portuguese-brazilian",
+				"streetsidesoftware.code-spell-checker",
+				"dotenv.dotenv-vscode",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"oderwat.indent-rainbow",
+				"SirTori.indenticator",
+				"VisualStudioExptTeam.vscodeintellicode",
+				"VisualStudioExptTeam.intellicode-api-usage-examples",
+				"DavidAnson.vscode-markdownlint",
+				"christian-kohler.path-intellisense",
+				"mtxr.sqltools",
+				"donjayamanne.python-environment-manager",
+				"njpwerner.autodocstring",
+				"KevinRose.vsc-python-indent",
+				"mgesbert.python-path",
+				"nils-ballmann.python-coding-tools",
+				"bungcip.better-toml",
+				"mtxr.sqltools-driver-pg"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or the host.
+	// "forwardPorts": [5000, 5432],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "pip install --user -r requirements.txt",
+
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}

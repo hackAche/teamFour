@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+#sidebar {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #151719;
+    left: -200px;
+    transition: 400ms all;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+#sidebar ul {
+    padding: 0 30px;
+}
+
+#sidebar ul li {
+    color: rgba(230, 230, 230, 1);
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.4);
+    display: block;
+    text-align: center;
+}
+
+#sidebar ul li a {
+    color: rgba(230, 230, 230, 1);
+    text-decoration: none;
+}
+
+#sidebar ul li:nth-child(2) {
+    border-top: 1px solid rgba(100, 100, 100, 0.4)
+}
+
+#sidebar .toggle-btn {
+    border-radius: 10px;
+    width: 68px;
+    height: 68px;
+    background-color: #151719;
+}
+
+#sidebar .toggle-btn i {
+    color: #fff;
+    font-size: 35px;
+    padding: 16px 19px 19px;
+}
+
+.opcoes {
+    position: absolute;
+    left: 230px;
+    top: 20px;
+    display: flex;
+}
+
+.opcoes form {
+    background-color: #0066CC;
+    border-radius: 10px;
+    padding: 18px;
+    margin-left: 20px;
+    position: relative;
+    height: 68px;
+    width: 220px;
+}
+
+.opcoes form input {
+    padding: 8px;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    color: #151719;
+    padding-left: 35px;
+}
+
+.opcoes form input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.opcoes form i {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: x-large;
+}
+
+.custom-select {
+    position: relative;
+    top: 7px;
+    left: 36px;
+    font-family: sans-serif;
+}
+
+#sidebar .brand-logo img {
+    margin: 20px auto 20px;
+    width: 80px;
+    display: block;
+}
+
+#sidebar .footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 12px;
+    left: 35%;
+}
+
+.zoomHolder {
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.Niveis .fa {
+    font-size: 34px;
+    margin-top: 1px;
+}
+
+.Niveis {
+    margin-left: 20px;
+}
+
+.Niveis a {
+    color: #151719;
+    text-decoration: none;
+}
+
+.dropbtn {
+    background-color: #f9f9f9;
+    color: #151719;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    top: -3px;
+    left: 40px;
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+    background-color: #0066CC
+}
+
+.dropdown:hover>.dropdown-content,
+.submenu:hover>.dropdown-content {
+    display: block;
+}
+
+.submenu {
+    position: relative;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f9f9f9;
+}
+
+.dropdown>.dropdown-content .dropdown-content {
+    left: 100%;
+    top: 0;
+}
+
+.BottomBar {
+    text-align: center;
+    list-style: none;
+    position: fixed;
+    bottom: -75px;
+    left: 0;
+    right: 0;
+}
+
+.BottomBar.active {
+    bottom: 0;
+}
+
+.BottomBar-content {
+    padding: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background: #0066CC;
+}
+
+.BottomBar button {
+    padding: 10px;
+    background-color: #0066CC;
+    border: 0;
+}

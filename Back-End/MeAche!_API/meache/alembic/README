@@ -1,0 +1,19 @@
+# Comando básicos para o alembic
+
+## Para criar o alembic
+
+```shell
+$ alembic init -t async alembic
+```
+
+## Para criar migrações
+
+```shell
+$ alembic revision --autogenerate -m "Nome da migração"
+```
+
+## Para fazer as migrações
+
+```shell
+$ alembic upgrade head
+```
