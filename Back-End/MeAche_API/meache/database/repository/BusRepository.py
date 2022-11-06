@@ -30,6 +30,15 @@ class BusRepository:
 
             bus = await session.execute(stmt)
             return bus.scalars().first()
+    
+    async def showId(id:int) -> BusModel | None:
+        async with connection() as session:
+            session: Session
+
+            stmt = select(BusModel).where(BusModel.id == id)
+
+            bus = await session.execute(stmt)
+            return bus.scalars().first()
 
     async def index() -> list[BusModel]:
         async with connection() as session:

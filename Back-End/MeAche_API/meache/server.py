@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import BusRouter, testRouter
+from routers import BusRouter, RotasRouter
 
 app = FastAPI()
 
@@ -17,6 +17,5 @@ app.add_middleware(
     allow_headers=['*'],
 )
 
-app.include_router(testRouter)
 app.include_router(BusRouter)
-# app.include_router(router_asset.router);
+app.include_router(RotasRouter)

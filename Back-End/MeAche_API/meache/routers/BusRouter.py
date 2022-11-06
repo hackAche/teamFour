@@ -1,5 +1,5 @@
 from controllers import BusController
-from fastapi import APIRouter, HTTPException, Query, status
+from fastapi import APIRouter, status
 from schemas import BusSchema
 
 router = APIRouter(

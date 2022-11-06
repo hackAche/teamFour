@@ -27,3 +27,7 @@ test:
 
 sec:
 	@pip-audit
+
+
+run:
+	@cd meache/ && uvicorn server:app --reload

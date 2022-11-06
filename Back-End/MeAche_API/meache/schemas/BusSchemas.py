@@ -1,11 +1,10 @@
 from typing import Optional
 
 from pydantic import BaseModel, Field
-from typing_extensions import Annotated
 
 
 class BusSchema(BaseModel):
-    id: int = Field(
+    id: Optional[int] = Field(
         1,
         title='ID',
         description='ID do ônibus',
